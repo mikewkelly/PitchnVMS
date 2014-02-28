@@ -336,3 +336,21 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/index.php?r=user
 ---
+2014/02/28 23:31:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/person".' in /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CWebApplication.php(141): CWebApplication->runController('user/person')
+#1 /Users/YuKaSyariPhudin/Desktop/319Final/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/YuKaSyariPhudin/Desktop/319Final/team6/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user/person
+---
+2014/02/28 23:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CController.php:483
+Stack trace:
+#0 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CController.php(270): CController->missingAction('user')
+#1 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CWebApplication.php(282): CController->run('user')
+#2 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CWebApplication.php(141): CWebApplication->runController('person/user')
+#3 /Users/YuKaSyariPhudin/Desktop/319Final/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/YuKaSyariPhudin/Desktop/319Final/team6/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=person/user
+---

@@ -19,7 +19,10 @@ class UserIdentity extends CUserIdentity {
         $record = Person::model()->findByAttributes(array('email' => $this->username));
         if ($record === null)
             $this->errorCode = self::ERROR_USERNAME_INVALID;
-        else if ($record->password !== $this->password)
+        else if ($record->password !==crypt ($this->password,'urzyVJvpD7wPbxMFKKGRKgLkukeWBexM3w0XZeleI7SmQCF49efcn4F64fTT
+                                                        Ai2K3JZokr6VnJTWaHCLTkQSLo2WxElOKYdehQDpC1aA5BK8ZwHZrfj0Ah2O
+                                                        qq52UpdH173TqniWtBqycVBuEHXa7oyBJCgFX7qA0bfVDIiu25UHH3QKk39n
+                                                        FSOuTTgJIUdMnVxZiSSk'))
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
         else {
             $this->errorCode = self::ERROR_NONE;

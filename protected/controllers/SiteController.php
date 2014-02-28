@@ -87,29 +87,6 @@ class SiteController extends Controller {
         // display the login form
         $this->render('register', array('model' => $model));
     }
-    
-    /**
-     * Displays the login page
-     */
-    public function actionTestLogin() {
-        $model = new LoginForm;
-
-        // if it is ajax validation request
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'testlogin-form') {
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
-        }
-
-        // collect user input data
-        if (isset($_POST['TestLoginForm'])) {
-            $model->attributes = $_POST['TestLoginForm'];
-            // validate user input and redirect to the previous page if valid
-            if ($model->validate() && $model->login())
-                $this->redirect(Yii::app()->user->returnUrl);
-        }
-        // display the login form
-        $this->render('testlogin', array('model' => $model));
-    }
 
     /**
      * Displays the login page
@@ -133,7 +110,7 @@ class SiteController extends Controller {
         // display the login form
         $this->render('login', array('model' => $model));
     }
-
+    
     /**
      * Logs out the current user and redirect to homepage.
      */

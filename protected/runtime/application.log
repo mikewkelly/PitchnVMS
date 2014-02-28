@@ -312,3 +312,27 @@ Stack trace:
 REQUEST_URI=/index.php?r=site/register
 HTTP_REFERER=http://localhost:8888/index.php
 ---
+2014/02/28 23:15:04 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "register".' in /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CController.php:878
+Stack trace:
+#0 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CController.php(782): CController->renderPartial('register', Array, true)
+#1 /Users/YuKaSyariPhudin/Desktop/319Final/team6/protected/controllers/SiteController.php(88): CController->render('register', Array)
+#2 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/actions/CInlineAction.php(49): SiteController->actionRegister()
+#3 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CWebApplication.php(282): CController->run('register')
+#7 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CWebApplication.php(141): CWebApplication->runController('site/register')
+#8 /Users/YuKaSyariPhudin/Desktop/319Final/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Users/YuKaSyariPhudin/Desktop/319Final/team6/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=site/register
+HTTP_REFERER=http://localhost:8888/index.php
+---
+2014/02/28 23:18:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/YuKaSyariPhudin/Desktop/319Final/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /Users/YuKaSyariPhudin/Desktop/319Final/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/YuKaSyariPhudin/Desktop/319Final/team6/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=user
+---
